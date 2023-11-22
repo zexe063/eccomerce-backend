@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="./output.css"> -->
+
+    
+    
+</head>
+<body>
+
+<%if(product){ %>
+
+    
+<div class="container">
+
+
+    <header>
+    Order placed
+    </header>
+    
+    <div class=" card">
+        
+    <div class="content">
+        <h3>Thanks for Purchase</h3>
+        <p>Your oder is placed succefully.i send your orde within next 15 wokring days</p>
+    </div>
+    
+    <div class=" orderdetails">
+        <h3 class="h">order details:-</h3>
+      <div class="image">
+                <img src=<%=product.image%>>
+                <div>
+                    <p><%=product.title%></p>
+                    <p>₹<%=product.price%></p>
+                </div>
+            </div>
+           
+    
+    
+        </div>
+    
+    </div>
+    
+    </div>
+    
+    </div>
+    
+
+    <% } %>
+
+
+</body>
+</html>
