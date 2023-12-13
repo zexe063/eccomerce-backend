@@ -54,9 +54,7 @@ function rnadomkey(){
         res.json({id:session.id});
  })
 
- server.get("/", (req,res)=>{
-  res.send("helo murari eccomerce wenbitte")
- })
+ 
 server.listen("9000",()=>[
     console.log("server is started")
 ])
