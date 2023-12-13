@@ -15,7 +15,8 @@ const userSchema = new mongoose.Schema({
     FirstName:String,
     LastName:String,
     password:String,
-    email:String
+    email:String,
+   age:[String,require]
 })
 
 exports.user= mongoose.model('user', userSchema)

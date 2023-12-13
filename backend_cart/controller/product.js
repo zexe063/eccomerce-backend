@@ -12,8 +12,7 @@ const getproduct = async(req,res)=>{
     res.json({data})
 }
 const sortproduct = async(req,res)=>{
- 
-console.log(req.query);
+ console.log(req.query)
         const data = await Products.find().sort(req.query);
         res.json(data)
 }

@@ -10,13 +10,13 @@ const orderroutes = require('./routes/orderorutes');
 const authrouter = require('./routes/authroutes');
 const useroutes = require('./routes/userrouets');
 
-server.use(cors({
-  origin:"https://mern-frontend-puce-ten.vercel.app"
-}));
+server.use(cors());
 server.use(express.json());
+server.use(express.json())
  
 server.get("/", (req,res)=>{
   res.send("heloo mern project")
+
 })
  server.use("/products", productRouter )
  server.use("/cart", cartRouter)
@@ -54,6 +54,9 @@ function rnadomkey(){
         res.json({id:session.id});
  })
 
+ server.get("/", (req,res)=>{
+  res.send("helo murari eccomerce wenbitte")
+ })
 server.listen("9000",()=>[
     console.log("server is started")
 ])

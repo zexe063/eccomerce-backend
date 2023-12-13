@@ -41,7 +41,14 @@ const createuser = async(req,res)=>{
                 const data = await new user(req.body);
                 data.password = hashpassword;
                 data.save()
-                res.json("resgister")
+                if(data){
+
+                   res.json("resgister")
+                }
+                else{
+                    res.json("error")
+                }
+
             }
             else{
                 res.json("email registered")
@@ -66,7 +73,7 @@ const forgetpassword = async(req,res)=>{
    
     try{
  const jwtpassvalidate =  jwt.verify(req.body.hashedvalue, "murari824124");
- console.log(jwtpassvalidate)
+ 
 if(jwtpassvalidate.email === req.body.email && jwtpassvalidate.otp === req.body.otp){
     const hashpassword = bcrypt.hashSync(req.body.password, 10)
    const data = await user.updateOne({email:req.body.email},{$set:{password:hashpassword}});
