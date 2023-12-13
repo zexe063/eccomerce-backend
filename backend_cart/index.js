@@ -47,8 +47,8 @@ function rnadomkey(){
           ],
         
           mode: 'payment',
-          success_url: `https://mern-project-woad.vercel.app/Checkout/success`,
-          cancel_url: "https://mern-project-woad.vercel.app/cancel",
+          success_url: `https://mern-frontend-smoky.vercel.app//Checkout/success`,
+          cancel_url: "https://mern-frontend-smoky.vercel.app//cancel",
         });
 
         res.json({id:session.id});
