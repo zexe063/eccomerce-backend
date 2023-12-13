@@ -2,7 +2,7 @@
 
 
 const mongoose = require('mongoose');
- mongoose.connect("mongodb://localhost:27017/fullstack").then(()=>
+ mongoose.connect("mongodb+srv://thekms001:tZ6NAXeQLsrV5ozM@cluster0.q4vvj3z.mongodb.net/fullstack").then(()=>
  console.log("order collection conncetd")
  ).catch(()=>{
     console.log("eroor")
